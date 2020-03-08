@@ -2,25 +2,41 @@
 
 # All SpaceVim options are below [options] snippet
 [options]
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme
-    # layer, the value of this option is a string.
-    colorscheme = "gruvbox"
+
+    # 设置 SpaceVim 主题及背景，默认的主题是 gruvbox，如果你需要使用更
+    # 多的主题，你可以载入 colorscheme 模块
+    colorscheme = "onedark"
+    # 背景可以取值 "dark" 或 "light"
     colorscheme_bg = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors, the type of the value is boolean, true or false.
+    # 启用/禁用终端真色，在目前大多数终端下都是支持真色的，当然也有
+    # 一小部分终端不支持真色，如果你的 SpaceVim 颜色看上去比较怪异
+    # 可以禁用终端真色，将下面的值设为 false
     enable_guicolors = false
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts
+    # 设置状态栏上分割符号形状，如果字体安装失败，可以将值设为 "nil" 以
+    # 禁用分割符号，默认为箭头 "arrow"
     statusline_separator = "nil"
-    statusline_separator = "bar"
-    buffer_index_type = 4
-    # Display file type icon on the tabline, If you do not have nerd fonts
-    # installed, please change the value to false
+    statusline_inactive_separator = "bar"
+    # 设置顶部标签列表序号类型，有以下五种类型，分别是 0 - 4
+    # 0: 1 ➛ ➊
+    # 1: 1 ➛ ➀
+    # 2: 1 ➛ ⓵
+    # 3: 1 ➛ ¹
+    # 4: 1 ➛ 1
+    buffer_index_type = 1
+    # 显示/隐藏顶部标签栏上的文件类型图标，这一图标需要安装 nerd fonts，
+    # 如果未能成功安装这一字体，可以隐藏图标
     enable_tabline_filetype_icon = true
-    # Display current mode text on statusline, by default It is disabled,
-    # only color will be changed when switch modes.
-    enable_statusline_mode = false
+    # 是否在状态栏上显示当前模式，默认情况下，不显示 Normal/Insert 等
+    # 字样，只以颜色区分当前模式
+    enable_statusline_mode = true
+
+    # 文件树插件可选值包括：
+    # - vimfiler （默认）
+    # - nerdtree
+    # - defx
+    filemanager = "defx"
+    filetree_direction = "left"
+    vim_help_language = "cn"
 
 # Enable autocomplete layer
 [[layers]]
@@ -30,7 +46,7 @@
 
 [[layers]]
     name = "shell"
-    default_position = "top"
+    default_position = "bottom"
     default_height = 30
 
 # This is an example for adding custom plugins lilydjwg/colorizer
@@ -39,16 +55,16 @@
     merged = false
 [[layers]]
   name = "lang#c"
+  clang_executable = "/usr/bin/clang"
+  [layer.clang_std]
+    c = "c11"
+    cpp = "c++17"
+    objc = "c11"
+    objcpp = "c++17"
 [[layers]]
   name = "lsp"
 [[layers]]
   name = "format"
-[options]
-    # 文件树插件可选值包括：
-    # - vimfiler （默认）
-    # - nerdtree
-    # - defx
-    filemanager = "defx"
 
 # 版本控制
 [[layers]]
@@ -59,6 +75,22 @@
   name = "git"
   git-plugin = "fugitive"
 
+[[layers]]
+  name = "checkers"
+  show_cursor_error = false
 
 [[layers]]
   name = "lang#markdown"
+[[layers]]
+  name = "gtags"
+  gtagslabel = "pygments"
+[[layers]]
+  name = "colorscheme"
+[[layers]]
+  name = "lang#python"
+[[layers]]
+  name = "denite"
+[[layers]]
+name = "chinese"
+[[layers]]
+  name = "ui"
