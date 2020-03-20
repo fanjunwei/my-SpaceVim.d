@@ -37,6 +37,8 @@
     filemanager = "defx"
     filetree_direction = "left"
     # vim_help_language = "cn"
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after  = "myspacevim#after"
 
 # Enable autocomplete layer
 [[layers]]
