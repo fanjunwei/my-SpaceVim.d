@@ -90,8 +90,12 @@
 #   name = "colorscheme"
 # [[layers]]
 #   name = "lang#python"
-# [[layers]]
-#   name = "denite"
+
+
+#Fuzzy finder
+ [[layers]]
+#name = "denite"
+   name = "fzf"
 # [[layers]]
 # name = "chinese"
 # [[layers]]
