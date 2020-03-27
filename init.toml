@@ -63,8 +63,8 @@
     cpp = "c++17"
     objc = "c11"
     objcpp = "c++17"
-#[[layers]]
-#  name = "lsp"
+[[layers]]
+  name = "lsp"
 # [[layers]]
 #   name = "format"
 
@@ -83,8 +83,8 @@
 
 # [[layers]]
 #   name = "lang#markdown"
-# [[layers]]
-  # name = "gtags"
+[[layers]]
+  name = "gtags"
 #gtagslabel = "pygments"
 # [[layers]]
 #   name = "colorscheme"
@@ -100,8 +100,7 @@
 # name = "chinese"
 # [[layers]]
 #   name = "ui"
-# coc.nvim 核心配置，不要删除
-[[custom_plugins]]
-  name = 'neoclide/coc.nvim'
-  merge = 0
-  build =  'yarn install --frozen-lockfile'
+# [[custom_plugins]]
+  # name = 'neoclide/coc.nvim'
+  # merge = 0
+  # build =  'yarn install --frozen-lockfile'
