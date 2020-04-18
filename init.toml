@@ -73,9 +73,9 @@
 #   name = "VersionControl"
 #   enable-gtm-status = true
 #
-# [[layers]]
-#   name = "git"
-#   git-plugin = "fugitive"
+ [[layers]]
+   name = "git"
+#git-plugin = "fugitive"
 
 [[layers]]
   name = "checkers"
@@ -104,3 +104,5 @@
   # name = 'neoclide/coc.nvim'
   # merge = 0
   # build =  'yarn install --frozen-lockfile'
+#[[layers]]
+#    name = "cscope"
