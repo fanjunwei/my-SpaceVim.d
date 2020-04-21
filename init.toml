@@ -85,11 +85,15 @@
 #   name = "lang#markdown"
 [[layers]]
   name = "gtags"
+[[layers]]
+  name = "ui"
+  # enable_sidebar = true
 #gtagslabel = "pygments"
 # [[layers]]
 #   name = "colorscheme"
-# [[layers]]
-#   name = "lang#python"
+[[layers]]
+  name = "lang#python"
+  enable_typeinfo = true
 
 
 #Fuzzy finder
@@ -98,11 +102,10 @@
    name = "fzf"
 # [[layers]]
 # name = "chinese"
-# [[layers]]
-#   name = "ui"
 # [[custom_plugins]]
   # name = 'neoclide/coc.nvim'
   # merge = 0
   # build =  'yarn install --frozen-lockfile'
 #[[layers]]
 #    name = "cscope"
+
