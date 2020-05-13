@@ -1,6 +1,8 @@
 set wrap 
+vmap <C-c> "+y
+set ma
 set redrawtime=10000
-let g：syntastic_python_python_exec ='/Users/fanjunwei/Documents/t2stor/py3env/bin/python'
+#let g：syntastic_python_python_exec ='/Users/fanjunwei/Documents/t2stor/py3env/bin/python'
 let g:neoformat_python_black = {
     \ 'exe': 'black',
     \ 'stdin': 1,
